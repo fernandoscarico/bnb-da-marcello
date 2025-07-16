@@ -132,32 +132,40 @@
 <section id="prenotazioni">
   <div class="container">
     <h2 class="text-center mb-4">Prenotazioni</h2>
-    <form class="mx-auto" style="max-width: 600px;">
-      <!-- Il form lo inseriremo dopo -->
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Nome e Cognome" required>
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email" required>
-      </div>
-      <div class="mb-3">
-        <input type="tel" class="form-control" placeholder="Telefono" required>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <input type="date" class="form-control" required>
+      <form action="https://formsubmit.co/fernando.scarico@gmail.com" method="POST" class="mx-auto" style="max-width: 600px;">
+        <!-- Anti-spam field -->
+        <input type="text" name="_honey" style="display:none">
+        
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        
+        <!-- Redirect dopo invio -->
+        <input type="hidden" name="_next" value="https://tuosito.github.io/grazie.html">
+        
+        <div class="mb-3">
+          <input type="text" name="nome" class="form-control" placeholder="Nome e Cognome" required>
         </div>
-        <div class="col-md-6 mb-3">
-          <input type="date" class="form-control" required>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
         </div>
-      </div>
-      <div class="mb-3">
-        <input type="number" class="form-control" placeholder="Numero di ospiti" required>
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="3" placeholder="Richieste speciali"></textarea>
-      </div>
-      <button type="submit" class="btn btn-main w-100">Richiedi Disponibilità</button>
+        <div class="mb-3">
+          <input type="tel" name="telefono" class="form-control" placeholder="Telefono" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input type="date" name="checkin" class="form-control" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="date" name="checkout" class="form-control" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="number" name="ospiti" class="form-control" placeholder="Numero di ospiti" required>
+        </div>
+        <div class="mb-3">
+          <textarea name="richieste" class="form-control" rows="3" placeholder="Richieste speciali"></textarea>
+        </div>
+        <button type="submit" class="btn btn-main w-100">Richiedi Disponibilità</button>
     </form>
   </div>
 </section>
